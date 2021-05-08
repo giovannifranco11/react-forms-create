@@ -1,0 +1,46 @@
+.product-table-container{
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-height: 370px;
+    border: 1px solid green;
+    margin-top: 10px;
+        
+    
+}
+
+.products-form{
+    background-color:darkseagreen;
+    width: 40%;
+    border: 1px solid green;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 500px;   
+    
+}
+
+.form-two{
+    
+    width: 40%;
+    border: 1px solid green;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 50px;   
+    
+}
+
+.genero{
+    color: brown;
+    border: 2px solid turquoise;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px;
+    width: 45%;
+    margin-bottom: 15px;
+}
