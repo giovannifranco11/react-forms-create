@@ -1,4 +1,4 @@
-import  React from 'react'; 
+import  React, { useState } from 'react'; 
 import FilterableProductTable from './components/naranja/filterable-produts-table.comp';
 
 
@@ -107,11 +107,37 @@ const PeliculasPage = () => {
                 
         ];
 
+        const [products, setProducts] = useState(listaPeliculas);
 
 
     return (
         <>
-        <FilterableProductTable listaPeliculas={listaPeliculas} />
+        <FilterableProductTable 
+            listaPeliculas={products}
+            onAddProduct={(newProductObj, generoId)=>{
+                //1. crear nuevo arreglo de products
+                const newProducts = [];
+                for(let i=0; i<products.length; i++){
+                    if(products[i].id === generoId){
+                        newProducts.push(products[i]);
+                    }
+                    else{
+                        newProducts.push(
+                            {
+                                ...products[i],
+                                products:[...products[i].products, newProductObj]
+                            }
+                        );
+                    }                    
+                }
+
+                //2. Cambiar el arreglo de products a traves de la función setProducts
+                setProducts(newProducts);
+                //console.log({newProducts});
+                //console.log(generoId);
+                //console.log(productObj);
+            }}
+        />
         
         </>
         

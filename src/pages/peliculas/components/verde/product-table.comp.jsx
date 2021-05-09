@@ -17,6 +17,14 @@ const ProductTable = (props) => {
 
     const addProduct = (event) =>{
         event.preventDefault();
+        const newProduct = {
+            id: nombre,
+            nombre: nombre,
+            duracion: duracion,
+            stock: stock,
+        }
+        props.onAddProduct(newProduct, genero);
+
         console.log('Género' +": " + genero);
         console.log('Nombre' +": " + nombre);
         console.log('Duración' +": " + duracion);

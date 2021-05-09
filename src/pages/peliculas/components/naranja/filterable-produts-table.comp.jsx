@@ -10,7 +10,10 @@ const FilterableProductTable = (props) => {
         <div className="filterable-product-table-container">
             <h3><b>PELÍCULAS</b></h3>
             <SearchBar/>            
-            <ProductTable listaPeliculas={props.listaPeliculas}/> 
+            <ProductTable 
+                listaPeliculas={props.listaPeliculas}
+                onAddProduct={props.onAddProduct}
+            /> 
 
             
             <b>By Giovanni Franco</b>
