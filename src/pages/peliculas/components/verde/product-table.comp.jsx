@@ -37,7 +37,7 @@ const ProductTable = (props) => {
             <div className="float">
             <MasInfo/>
             <div className="genero">GÉNERO</div>
-            {props.listaPeliculas.map((category,index)=>{
+            {props.listaPeliculas.map((category, index)=>{
                 
                   return (
                     <React.Fragment key={category.id}>

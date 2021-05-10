@@ -133,8 +133,8 @@ const PeliculasPage = () => {
 
                 //2. Cambiar el arreglo de products a traves de la función setProducts
                 setProducts(newProducts);
-                //console.log({newProducts});
-                //console.log(generoId);
+                console.log({newProducts});
+                console.log(generoId);
                 //console.log(productObj);
             }}
         />
