@@ -10,10 +10,10 @@ import MasInfo from '../morado/masinfo.comp';
 const ProductTable = (props) => {
 
     
-    const [genero, setGenero] = useState('');
+    const [category, setCategory] = useState('g1');
     const [nombre, setNombre] = useState('');
-    const [duracion, setDuracion] = useState('');
-    const [stock, setStock] = useState('');
+    const [duracion, setDuracion] = useState('0');
+    const [stock, setStock] = useState('10');
 
     const addProduct = (event) =>{
         event.preventDefault();
@@ -23,9 +23,9 @@ const ProductTable = (props) => {
             duracion: duracion,
             stock: stock,
         }
-        props.onAddProduct(newProduct, genero);
+        props.onAddProduct(newProduct, category);
 
-        console.log('Género' +": " + genero);
+        console.log('Género' +": " + category);
         console.log('Nombre' +": " + nombre);
         console.log('Duración' +": " + duracion);
         console.log('Stock' +": " + stock);
@@ -70,9 +70,9 @@ const ProductTable = (props) => {
                     <tr>
                         <td>
                         <select 
-                            value={genero}
+                            value={category}
                             onChange={(event)=>{
-                                setGenero(event.target.value);
+                                setCategory(event.target.value);
                             }}
                         >
                             <option value="Vacio"></option>
@@ -161,9 +161,9 @@ const ProductTable = (props) => {
                     <tr>
                         <td>
                         <select 
-                            value={genero}
+                            value={category}
                             onChange={(event)=>{
-                                setGenero(event.target.value);
+                                setCategory(event.target.value);
                             }}
                         >
                             <option value="Vacio"></option>

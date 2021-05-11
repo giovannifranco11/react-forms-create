@@ -114,11 +114,11 @@ const PeliculasPage = () => {
         <>
         <FilterableProductTable 
             listaPeliculas={products}
-            onAddProduct={(newProductObj, generoId)=>{
+            onAddProduct={(newProductObj, categoryId) => {
                 //1. crear nuevo arreglo de products
                 const newProducts = [];
-                for(let i=0; i<products.length; i++){
-                    if(products[i].id === generoId){
+                for (let i = 0; i < products.length; i++) {
+                    if (products[i].id == categoryId) {
                         newProducts.push(products[i]);
                     }
                     else{
@@ -134,7 +134,7 @@ const PeliculasPage = () => {
                 //2. Cambiar el arreglo de products a traves de la función setProducts
                 setProducts(newProducts);
                 console.log({newProducts});
-                console.log(generoId);
+                console.log(categoryId);
                 //console.log(productObj);
             }}
         />

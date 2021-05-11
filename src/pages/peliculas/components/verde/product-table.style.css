@@ -23,8 +23,9 @@
 }
 
 .form-two{
-    
-    width: 40%;
+
+    background-color:coral;
+    width: 25%;
     border: 1px solid green;
     display: flex;
     flex-direction: row;
