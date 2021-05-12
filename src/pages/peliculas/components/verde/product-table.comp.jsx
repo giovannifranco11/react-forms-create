@@ -36,6 +36,100 @@ const ProductTable = (props) => {
             
             <div className="float">
             <MasInfo/>
+
+            <div className="prueba">hola
+
+            <form>
+            <b>AGREGAR NUEVA PELÍCULA</b>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                       <b>Género</b> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <select 
+                            value={category}
+                            onChange={(event)=>{
+                                setCategory(event.target.value);
+                            }}
+                        >
+                            <option value="Vacio"></option>
+                            <option value="g1">Animadas</option>
+                            <option value="g2">Terror</option>
+                            <option value="g3">Drama</option>
+                            <option value="g4">Acción</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nombre de Pelicula</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input
+                                type="text"
+                                placeholder="Ingrese nombre de pelicula"
+                                value={nombre}
+                                onChange={(event)=>{                                   
+                                    setNombre(event.target.value);
+                                }}
+                            />
+                        </td>
+                                    
+                    </tr>
+                    <tr>
+                        <td>Duración en minutos</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input
+                                type="text"
+                                placeholder="Ingrese duración en min"
+                                value={duracion}
+                                onChange={(event)=>{                                   
+                                    setDuracion(event.target.value);
+                                }}
+                            />
+                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Disponible /No Disponible</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input
+                                type="text"
+                                placeholder="Esta disponible?"
+                                value={stock}
+                                onChange={(event)=>{                                   
+                                    setStock(event.target.value);
+                                }}
+                            />
+                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button 
+                                onClick={addProduct}
+                            >
+                                Agregar pelicula
+                            </button>
+                        </td>
+                    </tr>
+                        
+                    </tbody>
+                    
+                                        
+                </table>
+            </form>
+            
+            </div>
+
             <div className="genero">GÉNERO</div>
             {props.listaPeliculas.map((category, index)=>{
                 
@@ -59,7 +153,7 @@ const ProductTable = (props) => {
 
             <div className="form-two">
             <form>
-            <b>SOLICITAR UN NUEVO EVENTO</b>
+            <b>NUEVO EVENTO</b>
                 <table>
                     <tbody>
                     <tr>
@@ -76,10 +170,9 @@ const ProductTable = (props) => {
                             }}
                         >
                             <option value="Vacio"></option>
-                            <option value="Animadas">Animadas</option>
-                            <option value="Terror">Terror</option>
-                            <option value="Drama">Drama</option>
-                            <option value="Accion">Acción</option>
+                            <option value="g5">Privado</option>
+                            <option value="g5">Público</option>
+                            <option value="g5">Comercial</option>                            
                         </select>
                         </td>
                     </tr>
@@ -136,7 +229,7 @@ const ProductTable = (props) => {
                             <button 
                                 onClick={addProduct}
                             >
-                                Agregar pelicula
+                                Agregar evento
                             </button>
                         </td>
                     </tr>
@@ -167,10 +260,10 @@ const ProductTable = (props) => {
                             }}
                         >
                             <option value="Vacio"></option>
-                            <option value="Animadas">Animadas</option>
-                            <option value="Terror">Terror</option>
-                            <option value="Drama">Drama</option>
-                            <option value="Accion">Acción</option>
+                            <option value="g1">Animadas</option>
+                            <option value="g2">Terror</option>
+                            <option value="g3">Drama</option>
+                            <option value="g4">Acción</option>
                         </select>
                         </td>
                     </tr>

@@ -102,6 +102,31 @@ const PeliculasPage = () => {
                                 stock:0,
                             }
                         ]
+                },
+
+                {
+                    id:"g5",
+                    nombre:' 🔴  EVENTOS',
+                        products:[
+                            {
+                                id:"g4p1",
+                                nombre:"Privado",
+                                duracion:"250",
+                                stock:5,
+                            },
+                            {
+                                id:"g4p2",
+                                nombre:"Francotirador",
+                                duracion:"185",
+                                stock:15,
+                            },
+                            {
+                                id:"g4p3",
+                                nombre:"The avengers",
+                                duracion:"190",
+                                stock:0,
+                            }
+                        ]
                 }
 
                 
@@ -118,7 +143,7 @@ const PeliculasPage = () => {
                 //1. crear nuevo arreglo de products
                 const newProducts = [];
                 for (let i = 0; i < products.length; i++) {
-                    if (products[i].id == categoryId) {
+                    if (products[i].id !== categoryId) {
                         newProducts.push(products[i]);
                     }
                     else{

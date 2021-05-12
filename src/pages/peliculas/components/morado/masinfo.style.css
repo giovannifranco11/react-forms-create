@@ -8,12 +8,14 @@
     margin-right: 10px;
     width: 35%;
     font-size: 20px;
+    border-radius: 2%;
 
 }
 
 .hola{
-    border: 2px solid fuchsia;
+    border: 2px solid yellow;
     margin-bottom: 10px;
     margin-right: 10px;
+    border-radius: 20%;
     
 }

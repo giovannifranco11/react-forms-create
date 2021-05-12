@@ -2,9 +2,11 @@
     width: 95%;
     margin-left: 10px;
     margin-right: 10px;
-    min-height: 370px;
+    min-height: 470px;
     border: 1px solid green;
+    border-radius: 2%;
     margin-top: 10px;
+    color:blanchedalmond;
         
     
 }
@@ -32,16 +34,27 @@
     justify-content: left;
     margin-top: 10px;
     margin-bottom: 15px;
-    margin-left: 50px;   
+    margin-left: 50px;
+    float: left;
     
 }
 
 .genero{
-    color: brown;
+    color:whitesmoke;
     border: 2px solid turquoise;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 5px;
     width: 45%;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.prueba{
+    background-color:lightsalmon;
+    border: 2px solid pink;
+    width: 45%;
+    margin-left: 400px;
+    margin-right: 20px;
+    float: right;
 }
