@@ -13,7 +13,7 @@
 }
 
 .hola{
-    border: 2px solid yellow;
+    border: 2px dotted palegreen;
     margin-bottom: 10px;
     margin-right: 10px;
     border-radius: 20%;

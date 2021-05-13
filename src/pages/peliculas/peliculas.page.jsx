@@ -116,13 +116,13 @@ const PeliculasPage = () => {
                             },
                             {
                                 id:"g4p2",
-                                nombre:"Francotirador",
+                                nombre:"Público",
                                 duracion:"185",
                                 stock:15,
                             },
                             {
                                 id:"g4p3",
-                                nombre:"The avengers",
+                                nombre:"Comercial",
                                 duracion:"190",
                                 stock:0,
                             }

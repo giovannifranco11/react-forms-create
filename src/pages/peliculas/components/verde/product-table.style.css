@@ -43,7 +43,7 @@
     color:whitesmoke;
     border: 2px solid turquoise;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 90px;
     margin-left: 5px;
     width: 45%;
     margin-bottom: 30px;
@@ -53,6 +53,15 @@
 .prueba{
     background-color:lightsalmon;
     border: 2px solid pink;
+    width: 45%;
+    margin-left: 400px;
+    margin-right: 20px;
+    float: right;
+}
+
+.ciudad{
+    background-color:darkkhaki;
+    border: 2px solid greenyellow;
     width: 45%;
     margin-left: 400px;
     margin-right: 20px;

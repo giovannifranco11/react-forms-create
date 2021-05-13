@@ -6,6 +6,9 @@ import ProductRow from '../rojo/product-row.comp';
 
 import './product-table.style.css';
 import MasInfo from '../morado/masinfo.comp';
+import uno from '../naranja/imagenes/uno.png';
+import tres from '../naranja/imagenes/tres.png';
+
 
 const ProductTable = (props) => {
 
@@ -21,7 +24,7 @@ const ProductTable = (props) => {
             id: nombre,
             nombre: nombre,
             duracion: duracion,
-            stock: stock,
+            stock: Number(stock),
         }
         props.onAddProduct(newProduct, category);
 
@@ -37,15 +40,15 @@ const ProductTable = (props) => {
             <div className="float">
             <MasInfo/>
 
-            <div className="prueba">hola
+            <div className="ciudad">
 
             <form>
-            <b>AGREGAR NUEVA PELÍCULA</b>
+            <b>AGREGAR NUEVA CIUDAD</b>
                 <table>
                     <tbody>
                     <tr>
                         <td>
-                       <b>Género</b> 
+                       <b>Ciudad</b> 
                         </td>
                     </tr>
                     <tr>
@@ -57,21 +60,21 @@ const ProductTable = (props) => {
                             }}
                         >
                             <option value="Vacio"></option>
-                            <option value="g1">Animadas</option>
-                            <option value="g2">Terror</option>
-                            <option value="g3">Drama</option>
-                            <option value="g4">Acción</option>
+                            <option value="g11">Pereira</option>
+                            <option value="g21">Leticia</option>
+                            <option value="g31">Barranquilla</option>
+                            <option value="g41">Cartagena</option>
                         </select>
                         </td>
                     </tr>
                     <tr>
-                        <td>Nombre de Pelicula</td>
+                        <td>Ubicación</td>
                     </tr>
                     <tr>
                         <td>
                             <input
                                 type="text"
-                                placeholder="Ingrese nombre de pelicula"
+                                placeholder="Ingrese dirección"
                                 value={nombre}
                                 onChange={(event)=>{                                   
                                     setNombre(event.target.value);
@@ -81,7 +84,7 @@ const ProductTable = (props) => {
                                     
                     </tr>
                     <tr>
-                        <td>Duración en minutos</td>
+                        <td>Teléfono</td>
                     </tr>
                     <tr>
                         <td>
@@ -97,7 +100,7 @@ const ProductTable = (props) => {
                         </td>
                     </tr>
                     <tr>
-                        <td>Disponible /No Disponible</td>
+                        <td>Cantidad de salas</td>
                     </tr>
                     <tr>
                         <td>
@@ -117,7 +120,7 @@ const ProductTable = (props) => {
                             <button 
                                 onClick={addProduct}
                             >
-                                Agregar pelicula
+                                Agregar ciudad
                             </button>
                         </td>
                     </tr>
@@ -130,7 +133,8 @@ const ProductTable = (props) => {
             
             </div>
 
-            <div className="genero">GÉNERO</div>
+            <div className="genero">GÉNEROS</div>
+            <img src={uno} />
             {props.listaPeliculas.map((category, index)=>{
                 
                   return (
@@ -149,6 +153,9 @@ const ProductTable = (props) => {
                     </React.Fragment>
                   );
             })}
+            <br />
+            <img src={tres} />
+            <br /><br />
             </div>
 
             <div className="form-two">
@@ -183,7 +190,7 @@ const ProductTable = (props) => {
                         <td>
                             <input
                                 type="text"
-                                placeholder="Ingrese nombre de pelicula"
+                                placeholder="Ingrese nombre del cliente"
                                 value={nombre}
                                 onChange={(event)=>{                                   
                                     setNombre(event.target.value);
@@ -193,7 +200,7 @@ const ProductTable = (props) => {
                                     
                     </tr>
                     <tr>
-                        <td>Fecha</td>
+                        <td>Duración del evento</td>
                     </tr>
                     <tr>
                         <td>
@@ -204,12 +211,13 @@ const ProductTable = (props) => {
                                 onChange={(event)=>{                                   
                                     setDuracion(event.target.value);
                                 }}
+                                
                             />
                         
                         </td>
                     </tr>
                     <tr>
-                        <td>Lugar</td>
+                        <td>Disponilidad</td>
                     </tr>
                     <tr>
                         <td>
@@ -243,7 +251,7 @@ const ProductTable = (props) => {
 
             <div className="products-form">
             <form>
-            <b>AGREGAR NUEVA PELÍCULA</b>
+            <b>NUEVA PELÍCULA</b>
                 <table>
                     <tbody>
                     <tr>
@@ -268,13 +276,13 @@ const ProductTable = (props) => {
                         </td>
                     </tr>
                     <tr>
-                        <td>Nombre de Pelicula</td>
+                        <td>Nombre de Película</td>
                     </tr>
                     <tr>
                         <td>
                             <input
                                 type="text"
-                                placeholder="Ingrese nombre de pelicula"
+                                placeholder="Ingrese nombre de película"
                                 value={nombre}
                                 onChange={(event)=>{                                   
                                     setNombre(event.target.value);
