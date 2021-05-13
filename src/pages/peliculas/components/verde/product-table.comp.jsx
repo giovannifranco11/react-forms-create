@@ -15,8 +15,11 @@ const ProductTable = (props) => {
     
     const [category, setCategory] = useState('g1');
     const [nombre, setNombre] = useState('');
+    const [nombreC, setNombreC] = useState('');
     const [duracion, setDuracion] = useState('0');
-    const [stock, setStock] = useState('10');
+    const [duracionC, setDuracionC] = useState('0');
+    const [stock, setStock] = useState('0');
+    const [stockC, setStockC] = useState('0');
 
     const addProduct = (event) =>{
         event.preventDefault();
@@ -42,123 +45,6 @@ const ProductTable = (props) => {
 
             <div className="ciudad">
 
-            <form>
-            <b>AGREGAR NUEVA CIUDAD</b>
-                <table>
-                    <tbody>
-                    <tr>
-                        <td>
-                       <b>Ciudad</b> 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                        <select 
-                            value={category}
-                            onChange={(event)=>{
-                                setCategory(event.target.value);
-                            }}
-                        >
-                            <option value="Vacio"></option>
-                            <option value="g11">Pereira</option>
-                            <option value="g21">Leticia</option>
-                            <option value="g31">Barranquilla</option>
-                            <option value="g41">Cartagena</option>
-                        </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Ubicación</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input
-                                type="text"
-                                placeholder="Ingrese dirección"
-                                value={nombre}
-                                onChange={(event)=>{                                   
-                                    setNombre(event.target.value);
-                                }}
-                            />
-                        </td>
-                                    
-                    </tr>
-                    <tr>
-                        <td>Teléfono</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input
-                                type="text"
-                                placeholder="Ingrese duración en min"
-                                value={duracion}
-                                onChange={(event)=>{                                   
-                                    setDuracion(event.target.value);
-                                }}
-                            />
-                        
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Cantidad de salas</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input
-                                type="text"
-                                placeholder="Esta disponible?"
-                                value={stock}
-                                onChange={(event)=>{                                   
-                                    setStock(event.target.value);
-                                }}
-                            />
-                        
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button 
-                                onClick={addProduct}
-                            >
-                                Agregar ciudad
-                            </button>
-                        </td>
-                    </tr>
-                        
-                    </tbody>
-                    
-                                        
-                </table>
-            </form>
-            
-            </div>
-
-            <div className="genero">GÉNEROS</div>
-            <img src={uno} />
-            {props.listaPeliculas.map((category, index)=>{
-                
-                  return (
-                    <React.Fragment key={category.id}>
-                        <ProductCategoryRow categoryName={category.nombre}/>
-                        
-                        {category.products.map((product, indexProduct)=>{
-                            return (
-                                <ProductRow 
-                                    key={product.id} 
-                                    product={product}
-                                    categoryMasInfo={category.nombre}
-                                />
-                            );
-                        })}
-                    </React.Fragment>
-                  );
-            })}
-            <br />
-            <img src={tres} />
-            <br /><br />
-            </div>
-
-            <div className="form-two">
             <form>
             <b>NUEVO EVENTO</b>
                 <table>
@@ -217,7 +103,7 @@ const ProductTable = (props) => {
                         </td>
                     </tr>
                     <tr>
-                        <td>Disponilidad</td>
+                        <td>Disponible (1) /No Disponible (0)</td>
                     </tr>
                     <tr>
                         <td>
@@ -246,7 +132,124 @@ const ProductTable = (props) => {
                     
                                         
                 </table>
+            </form>                        
+         </div>
+
+            <div className="genero">GÉNEROS</div>
+            <img src={uno} />
+            {props.listaPeliculas.map((category, index)=>{
+                
+                  return (
+                    <React.Fragment key={category.id}>
+                        <ProductCategoryRow categoryName={category.nombre}/>
+                        
+                        {category.products.map((product, indexProduct)=>{
+                            return (
+                                <ProductRow 
+                                    key={product.id} 
+                                    product={product}
+                                    categoryMasInfo={category.nombre}
+                                />
+                            );
+                        })}
+                    </React.Fragment>
+                  );
+            })}
+            <br />
+            <img src={tres} />
+            <br /><br />
+            </div>
+
+            <div className="form-two">
+            <form>
+            <b>AGREGAR NUEVA CIUDAD</b>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                       <b>Ciudad</b> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <select 
+                            value={category}
+                            onChange={(event)=>{
+                                setCategory(event.target.value);
+                            }}
+                        >
+                            <option value="Vacio"></option>
+                            <option value="g11">Pereira</option>
+                            <option value="g21">Leticia</option>
+                            <option value="g31">Barranquilla</option>
+                            <option value="g41">Cartagena</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ubicación</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input
+                                type="text"
+                                placeholder="Ingrese dirección"
+                                value={nombreC}
+                                onChange={(event)=>{                                   
+                                    setNombre(event.target.value);
+                                }}
+                            />
+                        </td>
+                                    
+                    </tr>
+                    <tr>
+                        <td>Teléfono</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input
+                                type="text"
+                                placeholder="Ingrese duración en min"
+                                value={duracionC}
+                                onChange={(event)=>{                                   
+                                    setDuracionC(event.target.value);
+                                }}
+                            />
+                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cantidad de salas</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input
+                                type="text"
+                                placeholder="Esta disponible?"
+                                value={stockC}
+                                onChange={(event)=>{                                   
+                                    setStockC(event.target.value);
+                                }}
+                            />
+                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button 
+                                onClick={addProduct}
+                            >
+                                Agregar ciudad
+                            </button>
+                        </td>
+                    </tr>
+                        
+                    </tbody>
+                    
+                                        
+                </table>
             </form>
+            
         </div>
 
             <div className="products-form">
@@ -308,7 +311,7 @@ const ProductTable = (props) => {
                         </td>
                     </tr>
                     <tr>
-                        <td>Disponible /No Disponible</td>
+                        <td>Disponible (1) /No Disponible (0)</td>
                     </tr>
                     <tr>
                         <td>

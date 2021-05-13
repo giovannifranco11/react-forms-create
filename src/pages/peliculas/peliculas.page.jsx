@@ -110,19 +110,19 @@ const PeliculasPage = () => {
                         products:[
                             {
                                 id:"g4p1",
-                                nombre:"Privado",
+                                nombre:"Carlos",
                                 duracion:"250",
                                 stock:5,
                             },
                             {
                                 id:"g4p2",
-                                nombre:"Público",
+                                nombre:"Sandra",
                                 duracion:"185",
                                 stock:15,
                             },
                             {
                                 id:"g4p3",
-                                nombre:"Comercial",
+                                nombre:"Claro",
                                 duracion:"190",
                                 stock:0,
                             }
